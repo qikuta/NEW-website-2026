@@ -18,7 +18,10 @@
       <strong>Quentin Ikuta, M.S.</strong>
       <span>Forestry • Tribal Stewardship • Climate Finance • GIS</span>
     </div>
-    <nav class="nav-links" aria-label="Main navigation">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav id="site-nav" class="nav-links" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="ifm.html">My Work</a>
@@ -95,10 +98,37 @@
 </section>
 <script>
 const path = location.pathname.split('/').pop() || 'index.html';
+const navLinks = document.querySelector('.nav-links');
+const navToggle = document.querySelector('.nav-toggle');
+
 document.querySelectorAll('.nav-links a').forEach(link => {
   const href = link.getAttribute('href');
   if (href === path) link.classList.add('active');
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 720 && navLinks && navToggle) {
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+    }
+  });
 });
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+    navLinks.classList.toggle('is-open', !isOpen);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720) {
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+    }
+  });
+}
 </script>
 
 </body>

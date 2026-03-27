@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 
+<body>
 <div id="lightbox" style="
   display:none;
   position:fixed;
@@ -43,7 +44,7 @@ document.getElementById('lightbox').onclick = function() {
 }
 </script>
 
-<body>
+
 
 <header class="site-header">
   <div class="container nav">
@@ -51,7 +52,10 @@ document.getElementById('lightbox').onclick = function() {
       <strong>Quentin Ikuta, M.S.</strong>
       <span>Forestry • Tribal Stewardship • Climate Finance • GIS</span>
     </div>
-    <nav class="nav-links" aria-label="Main navigation">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav id="site-nav" class="nav-links" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="ifm.html">My Work</a>
@@ -81,6 +85,27 @@ document.getElementById('lightbox').onclick = function() {
 
   <section class="section">
     <div class="container" style="max-width: 900px;">
+
+        <article class="panel card" style="margin-bottom: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--line);">
+  <img
+    src="assets/images/youthgis.png"
+    alt="Tribal Youth GIS Education"
+    style="width: 100%; max-width: 680px; max-height: 360px; object-fit: cover; border-radius: 16px; margin: 0 auto 1.25rem auto;"
+  />
+  <h2 style="font-size: 1.75rem; margin-bottom: 0.75rem;">
+    Tribal Youth GIS Education
+  </h2>
+  <p style="margin-bottom: 1rem;">
+    Co-led a hands-on GIS workshop for Native youth, introducing mapping, spatial analysis, and land stewardship applications. The program focused on building technical skills while connecting students to their lands and supporting future tribal natural resource leadership.
+  </p>
+  <div class="cta-row" style="margin-top: 0;">
+    <a class="btn btn-secondary" href="https://storymaps.arcgis.com/collections/128881e43aad4bd9971f1d15b6fcc901" target="_blank" rel="noreferrer">
+      Learn More
+    </a>
+  </div>
+</article>
+
+
 
       <article class="panel card" style="margin-bottom: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--line);">
         <img
@@ -182,10 +207,37 @@ document.getElementById('lightbox').onclick = function() {
 
 <script>
 const path = location.pathname.split('/').pop() || 'index.html';
+const navLinks = document.querySelector('.nav-links');
+const navToggle = document.querySelector('.nav-toggle');
+
 document.querySelectorAll('.nav-links a').forEach(link => {
   const href = link.getAttribute('href');
   if (href === path) link.classList.add('active');
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 720 && navLinks && navToggle) {
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+    }
+  });
 });
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+    navLinks.classList.toggle('is-open', !isOpen);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720) {
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+    }
+  });
+}
 </script>
 
 </body>

@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="home-mobile-bg">
 
 <header class="site-header">
   <div class="container nav">
@@ -18,7 +18,10 @@
       <strong>Quentin Ikuta, M.S.</strong>
       <span>Forestry • Tribal Stewardship • Climate Finance • GIS</span>
     </div>
-    <nav class="nav-links" aria-label="Main navigation">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav id="site-nav" class="nav-links" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="ifm.html">My Work</a>
@@ -35,15 +38,15 @@
 <section class="page-hero">
   <div class="container hero-grid">
     <div class="hero-copy glass">
-      <div class="eyebrow">Landing page • multi page portfolio</div>
+      <div class="eyebrow">Introduction</div>
       <h1>Tribal lands, climate finance, and generational stewardship.</h1>
       <p class="lead">
         I work at the intersection of Tribal land stewardship, forest carbon, GIS, and Indigenous-centered climate strategy. This site highlights my forestry work, featured media, speaking engagements, research, and updates in a more navigable multi page format.
       </p>
-      <p>-------------------------------------------------------------------------</p>
+      <hr>
       <p>I currently represent the Indian Land Tenure Foundation (ILTF) - National Indian Carbon Coalition (NICC) as an Improved Forest Management Project Maanger.
       </p>
-      <p>-------------------------------------------------------------------------</p>
+      <hr>
       <p>My previous work experience includes serving with the USDA Forest Service on the Umatilla and Nantahala National Forests, Americorps, and the Federal Reserve Bank of Minneapolis. 
       </p>
       <div class="cta-row">
@@ -67,8 +70,8 @@
     </div>
     <div class="hero-photo glass">
       <div class="photo-caption">
-        <strong>Field grounded, public facing, and relationship oriented.</strong>
-        <p>Healthy forests are the foundation of resilient communities. They protect ecosystems, support livelihoods, and power real climate solutions</p>
+        <strong>Welcome to my website.</strong>
+        <p>Check out the other pages for more information.</p>
       </div>
     </div>
   </div>
@@ -92,10 +95,37 @@
 
 <script>
 const path = location.pathname.split('/').pop() || 'index.html';
+const navLinks = document.querySelector('.nav-links');
+const navToggle = document.querySelector('.nav-toggle');
+
 document.querySelectorAll('.nav-links a').forEach(link => {
   const href = link.getAttribute('href');
   if (href === path) link.classList.add('active');
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 720 && navLinks && navToggle) {
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+    }
+  });
 });
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+    navLinks.classList.toggle('is-open', !isOpen);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720) {
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+    }
+  });
+}
 </script>
 
 </body>
