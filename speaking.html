@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quentin Ikuta | Speaking</title>
+<meta name="description" content="Quentin Ikuta portfolio site focused on Tribal stewardship, improved forest management, carbon finance, GIS, public speaking, and research." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">
+      <strong>Quentin Ikuta, M.S.</strong>
+      <span>Forestry • Tribal Stewardship • Climate Finance • GIS</span>
+    </div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ifm.html">My Work</a>
+      <a href="featured.html">Featured</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="research.html">Research</a>
+      <a href="updates.html">GIS</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="container split">
+    <div class="panel card">
+      <div class="eyebrow">Speaking</div>
+      <h1 style="font-size:clamp(2.4rem,5vw,4.2rem);">Conference Speaking, Workshops, and Tribal Engagement.</h1>
+      <p class="lead">This page is dedicated entirely to my speaking and engagement record, with filters to quickly navigate between conferences, trainings, Tribal work, partnerships, research, and youth development.</p>
+    </div>
+    <div class="panel card media-card">
+      <img src="assets/images/speaking-1.jpg" alt="Conference presentation room" />
+      <div class="media-meta">
+        <h3>Speaking Presence</h3>
+        <p>Quentin presenting to an audience of 500+ at the annual 2025 ESRI User Conference.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="filters" aria-label="Speaking filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="speaking">Speaking</button>
+      <button class="filter-btn" data-filter="training">Workshops</button>
+      <button class="filter-btn" data-filter="tribal">Tribal engagements</button>
+      <button class="filter-btn" data-filter="partnership">Partnerships</button>
+      <button class="filter-btn" data-filter="research">Research</button>
+      <button class="filter-btn" data-filter="youth">Youth development</button>
+    </div>
+    <div id="timeline" class="timeline"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <figure class="panel card media-card">
+      <img src="assets/images/speaking-2.jpg" alt="Conference session presentation" />
+      <figcaption style="padding-top:.8rem; color:var(--muted);">Presenting at the 2026 Stewards of the Southwest Summit.</figcaption>
+    </figure>
+    <figure class="panel card media-card">
+      <img src="assets/images/workshop.jpg" alt="Conference session presentation" />
+      <figcaption style="padding-top:.8rem; color:var(--muted);">Engaging outdoors with youth.</figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+<script>
+const engagements = [{"category": "speaking", "date": "2025", "venue": "ESRI User Conference", "title": "Presented on Tribal carbon development and the Bois Forte project", "description": "Presented in partnership with ESRI, including sessions reaching audiences of 150+ at the Conservation Summit and 500+ at the Native Nations Summit.", "links": [{"label": "ESRI User Conference", "url": "https://www.esri.com/en-us/about/events/uc/overview"}], "tags": ["Conference", "Bois Forte", "ESRI"]}, {"category": "speaking", "date": "2026", "venue": "Minnesota Land Trust Summit", "title": "Speaker on Improved Forest Management and Tribal carbon finance", "description": "Shared work related to IFM, Tribal carbon development, and stewardship aligned climate finance in a Minnesota land and conservation audience setting.", "links": [{"label": "McKnight Foundation", "url": "https://www.mcknight.org/"}], "tags": ["IFM", "Carbon finance"]}, {"category": "speaking", "date": "2026", "venue": "Stewards of the Southwest Summit", "title": "Presented on Tribal stewardship and carbon market strategies", "description": "Focused on strategic framing for Tribal stewardship, carbon development, and land based finance pathways.", "links": [], "tags": ["Stewardship", "Carbon markets"]}, {"category": "speaking", "date": "2025–2026", "venue": "University of British Columbia", "title": "Presented to 50+ professionals on Tribal carbon offsetting frameworks", "description": "Contributed to an Indigenous forest carbon convening context and helped advance discussion on Tribal centered carbon frameworks.", "links": [{"label": "University of British Columbia", "url": "https://www.ubc.ca/"}], "tags": ["Convening", "Frameworks", "Research"]}, {"category": "speaking", "date": "2026", "venue": "ILTF Native Land Conference", "title": "Session moderator and facilitator", "description": "Moderated and facilitated conference programming connected to Tribal land, stewardship, and carbon market dialogue.", "links": [{"label": "Indian Land Tenure Foundation", "url": "https://iltf.org/"}], "tags": ["Moderator", "Conference"]}, {"category": "training", "date": "Ongoing", "venue": "Workshops and trainings", "title": "Delivered training in partnership with COCO, Trees, Water & People, and NICC", "description": "Training focused on carbon markets, revenue generation, land back strategies, and financing Tribal land carbon projects.", "links": [{"label": "Trees, Water & People", "url": "https://treeswaterpeople.org/"}], "tags": ["Training", "Land back", "Finance"]}, {"category": "tribal", "date": "June 2025", "venue": "Makah engagement", "title": "Delivered a carbon markets presentation to Tribal Council and approximately 70 community members", "description": "Presented on carbon markets in a community facing context while supporting clearer understanding of opportunities, risks, and strategic considerations.", "links": [], "tags": ["Council presentation", "Community"]}, {"category": "tribal", "date": "Ongoing", "venue": "Tribal engagements", "title": "Worked directly with Tribal Nations across carbon, forestry, and stewardship initiatives", "description": "Includes work with Makah, Yakama, Leech Lake Band of Ojibwe, Fond du Lac Band, Snoqualmie Tribe, Bois Forte Band of Chippewa, and Yakutat Tlingit communities.", "links": [], "tags": ["Technical advising", "Site visits"]}, {"category": "tribal", "date": "Ongoing", "venue": "IFM project support", "title": "Supported development of Improved Forest Management carbon projects", "description": "Included Bois Forte related work connected to a project listed on Verra and Leech Lake related feasibility and forest inventory development support.", "links": [{"label": "Verra Registry", "url": "https://registry.verra.org/"}], "tags": ["Verra", "IFM", "Feasibility"]}, {"category": "tribal", "date": "Ongoing", "venue": "Tribal conferences and advising", "title": "Shared 100+ educational resources and conducted site visits, feasibility assessments, and technical advising", "description": "Public education and project support spanning Tribal forestry and carbon initiatives.", "links": [{"label": "Intertribal Timber Council", "url": "https://www.itcnet.org/"}], "tags": ["Resources", "Forestry", "Advising"]}, {"category": "partnership", "date": "Ongoing", "venue": "Capacity building and partnerships", "title": "Partnered with ESRI on Tribal GIS and land management initiatives", "description": "Collaborative work connecting mapping, land management, and Tribal climate and stewardship tools.", "links": [{"label": "ESRI", "url": "https://www.esri.com/"}], "tags": ["GIS", "Partnership"]}, {"category": "partnership", "date": "Ongoing", "venue": "Capacity building and partnerships", "title": "Collaborated with the Arbor Day Foundation on Tribal needs assessment work", "description": "Support for understanding needs, opportunities, and implementation considerations related to Tribal forestry and stewardship.", "links": [{"label": "Arbor Day Foundation", "url": "https://www.arborday.org/"}], "tags": ["Needs assessment", "Collaboration"]}, {"category": "partnership", "date": "Ongoing", "venue": "Capacity building and partnerships", "title": "Coordinated with Carbon Direct and Meta on forest carbon and remote sensing", "description": "Partnership adjacent work touching remote sensing, research, and the scaling of forest carbon market tools and methods.", "links": [{"label": "Carbon Direct Insights", "url": "https://carbondirect.com/insights"}], "tags": ["Remote sensing", "Carbon Direct", "Meta"]}, {"category": "youth", "date": "2025", "venue": "Lakota Nation Invitational", "title": "Led and organized a 2 day Tribal Youth GIS Workshop", "description": "Supported Indigenous youth pathways in GIS and natural resource management through a focused workshop developed with ESRI partnership support.", "links": [{"label": "Lakota Nation Invitational", "url": "https://www.lakotanationinvitational.com/"}], "tags": ["Youth", "GIS", "Workforce development"]}, {"category": "research", "date": "2025", "venue": "Journal of Forestry", "title": "First author publication", "description": "Publication related to oak regeneration research and forestry practice in the southern Appalachian mountains.", "links": [{"label": "Publication (USFS Treesearch)", "url": "https://www.fs.usda.gov/treesearch/"}], "tags": ["Publication", "Oak regeneration"]}, {"category": "research", "date": "2025–2026", "venue": "UBC Indigenous forest carbon convening", "title": "Contributing author and presenter on Indigenous forest based carbon offsetting framework work", "description": "Research and presentation work advancing Tribal centered carbon frameworks.", "links": [{"label": "University of British Columbia", "url": "https://www.ubc.ca/"}], "tags": ["Frameworks", "Presenter"]}, {"category": "research", "date": "Recent", "venue": "Carbon Direct / Meta research", "title": "Contributed to three publication related efforts on remote sensing, canopy height modeling, and scaling forest carbon markets", "description": "Work focused on analytical and technical dimensions of monitoring, scaling, and forest carbon estimation.", "links": [{"label": "Scaling Forest Carbon with AI & Remote Sensing", "url": "https://carbondirect.com/insights"}, {"label": "Meta", "url": "https://www.meta.com/"}], "tags": ["Remote sensing", "Canopy height", "AI"]}, {"category": "research", "date": "Recent", "venue": "ESRI feature", "title": "Featured in ESRI blog on the Tribal Carbon Co Benefits Tool", "description": "Public facing feature tied to the Tribal Carbon Co Benefits Tool and applied GIS for Tribal land and climate planning.", "links": [{"label": "ESRI", "url": "https://www.esri.com/"}], "tags": ["TCCBT", "GIS", "Feature"]}, {"category": "speaking", "date": "Ongoing", "venue": "Additional engagements", "title": "Tabled and engaged at Tribal Lands and Environment Forum, Tribal Economic Futures events, and related climate initiative spaces", "description": "Contributor to broader grasslands, soils, and peatlands carbon initiative conversations in addition to forestry centered work.", "links": [], "tags": ["Forum", "Economic futures", "Cross sector"]}];
+const timeline = document.getElementById('timeline');
+const filterButtons = document.querySelectorAll('.filter-btn');
+function renderTimeline(filter = 'all') {
+  const visible = engagements.filter(item => filter === 'all' || item.category === filter);
+  timeline.innerHTML = visible.map(item => `
+    <article class="timeline-card">
+      <div class="timeline-meta">
+        <div><strong>${item.date}</strong></div>
+        <div>${item.venue}</div>
+      </div>
+      <div>
+        <h3>${item.title}</h3>
+        <p>${item.description}</p>
+        <div class="tags">
+          ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+        </div>
+        ${item.links.length ? `
+          <div class="timeline-links">
+            ${item.links.map(link => `<a href="${link.url}" target="_blank" rel="noreferrer">${link.label} ↗</a>`).join('')}
+          </div>
+        ` : ''}
+      </div>
+    </article>
+  `).join('');
+}
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    renderTimeline(button.dataset.filter);
+  });
+});
+renderTimeline();
+</script>
+
+</main>
+<section class="footer">
+  <div class="container">
+    <div class="footer-card card">
+      <div>
+        <h3 style="font-size:1.4rem; margin-bottom:.2rem;">Get in touch</h3>
+        <p>For speaking, collaboration, Tribal stewardship strategy, or carbon market related conversations, connect through your preferred channel.</p>
+      </div>
+      <div class="cta-row" style="margin:0;">
+        <a class="btn btn-primary" href="mailto:ikuta.quentin@gmail.com?subject=Invitation to Connect&body=Hello, I would like to know more about..." target="_blank" rel="noreferrer">Email: Contact Quentin</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/company/national-indian-carbon-coalition" target="_blank" rel="noreferrer">Linkedin: ILTF-NICC</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const path = location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === path) link.classList.add('active');
+});
+</script>
+
+</body>
+</html>

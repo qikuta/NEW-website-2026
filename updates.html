@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quentin Ikuta | Updates</title>
+<meta name="description" content="Quentin Ikuta portfolio site focused on Tribal stewardship, improved forest management, carbon finance, GIS, public speaking, and research." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<div id="lightbox" style="
+  display:none;
+  position:fixed;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  justify-content:center;
+  align-items:center;
+">
+  <img id="lightbox-img" style="
+    max-width:90%;
+    max-height:90%;
+    border-radius:12px;
+  ">
+</div>
+
+<script>
+function openLightbox(src) {
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  lightbox.style.display = 'flex';
+}
+
+document.getElementById('lightbox').onclick = function() {
+  this.style.display = 'none';
+}
+</script>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">
+      <strong>Quentin Ikuta, M.S.</strong>
+      <span>Forestry • Tribal Stewardship • Climate Finance • GIS</span>
+    </div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ifm.html">My Work</a>
+      <a href="featured.html">Featured</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="research.html">Research</a>
+      <a href="updates.html">GIS</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="panel card" style="max-width: 900px; margin: 0 auto;">
+        <div class="eyebrow">GIS Projects</div>
+        <h1 style="font-size:clamp(2.4rem,5vw,4.2rem); margin-bottom: 0.8rem;">
+          GIS &amp; Remote Sensing Projects
+        </h1>
+        <p class="lead" style="max-width: 760px;">
+          Applied GIS, remote sensing, and spatial analysis projects focused on forest ecology, Tribal land stewardship, and environmental decision support.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+
+      <article class="panel card" style="margin-bottom: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--line);">
+        <img
+          src="assets/images/storymap.png"
+          alt="Oak StoryMap"
+          style="width: 100%; max-width: 680px; max-height: 360px; object-fit: cover; border-radius: 16px; margin: 0 auto 1.25rem auto;"
+        />
+        <h2 style="font-size: 1.75rem; margin-bottom: 0.75rem;">
+          Mapping Oak Stewardship Potential – Nantahala National Forest
+        </h2>
+        <p style="margin-bottom: 1rem;">
+          My Master of Science thesis summarized in an ArcGIS Online StoryMap. This project maps the realized niche of five oak species across the Nantahala Mountains to support management prioritization and silvicultural planning.
+        </p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn btn-secondary" href="https://arcg.is/1iSvaL1" target="_blank" rel="noreferrer">
+            View ArcGIS StoryMap
+          </a>
+        </div>
+      </article>
+
+      <article class="panel card" style="margin-bottom: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--line);">
+        <img
+          src="assets/images/potree.png"
+          alt="Point cloud viewer"
+          style="width: 100%; max-width: 680px; max-height: 360px; object-fit: cover; border-radius: 16px; margin: 0 auto 1.25rem auto;"
+        />
+        <h2 style="font-size: 1.75rem; margin-bottom: 0.75rem;">
+          Photogrammetric Point Cloud (UAS) – LAStools + Potree
+        </h2>
+        <p style="margin-bottom: 1rem;">
+          Analysis and visualization of a photogrammetrically derived point cloud from a UAS mission in the Arrowhead region of Minnesota. Delivered as an interactive Potree viewer for exploration.
+        </p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn btn-secondary" href="https://quentinikuta.com/laspublish.6212/portal.html">
+            Open Potree Viewer
+          </a>
+        </div>
+      </article>
+
+      <article class="panel card" style="margin-bottom: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--line);">
+        <img
+          src="assets/images/storymap_blackash.png"
+          alt="Black ash project"
+          style="width: 100%; max-width: 680px; max-height: 360px; object-fit: cover; border-radius: 16px; margin: 0 auto 1.25rem auto;"
+        />
+        <h2 style="font-size: 1.75rem; margin-bottom: 0.75rem;">
+          Black Ash Monitoring – Chippewa National Forest &amp; Leech Lake Band
+        </h2>
+        <p style="margin-bottom: 1rem;">
+          Remote sensing analysis of the health and spatial extent of black ash stands across Tribal and federal lands, supporting forest health monitoring and management decisions.
+        </p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn btn-secondary" href="https://arcg.is/0T1K0C" target="_blank" rel="noreferrer">
+            View ArcGIS StoryMap
+          </a>
+        </div>
+      </article>
+
+<article class="panel card" style="margin-bottom: 0; padding-bottom: 0;">
+  <img
+    src="assets/images/MartinCo_FinalCAFOLayout.png"
+    alt="CAFO analysis"
+    style="width: 100%; max-width: 680px; max-height: 360px; object-fit: cover; border-radius: 16px; margin: 0 auto 1.25rem auto; cursor: zoom-in;"
+    onclick="openLightbox(this.src)"
+  />
+  <h2 style="font-size: 1.75rem; margin-bottom: 0.75rem;">
+    CAFO Runoff Analysis – Martin County, Minnesota
+  </h2>
+  <p style="margin-bottom: 1rem;">
+    Spatial analysis of potential contaminant runoff from 152 concentrated animal feeding operations (CAFOs). Identified high risk watersheds including Elm Creek and evaluated land suitability.
+  </p>
+  <p style="margin-bottom: 1rem;">
+    Tools used included Python for attribute calculations, HEC GeoHMS curve number modeling, and ArcGIS Pro. Data sourced from Minnesota geospatial datasets.
+  </p>
+  <p>
+    Only 17 of 152 CAFO sites were located on suitable land, highlighting significant environmental risk patterns.
+  </p>
+</article>
+
+    </div>
+  </section>
+
+</main>
+
+<section class="footer">
+  <div class="container">
+    <div class="footer-card card">
+      <div>
+        <h3 style="font-size:1.4rem; margin-bottom:.2rem;">Get in touch</h3>
+        <p>For speaking, collaboration, Tribal stewardship strategy, or carbon market related conversations, connect through your preferred channel.</p>
+      </div>
+      <div class="cta-row" style="margin:0;">
+        <a class="btn btn-primary" href="mailto:ikuta.quentin@gmail.com?subject=Invitation to Connect&body=Hello, I would like to know more about..." target="_blank" rel="noreferrer">Email: Contact Quentin</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/company/national-indian-carbon-coalition" target="_blank" rel="noreferrer">Linkedin: ILTF-NICC</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const path = location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === path) link.classList.add('active');
+});
+</script>
+
+</body>
+</html>

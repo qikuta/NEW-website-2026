@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quentin Ikuta | About</title>
+<meta name="description" content="Quentin Ikuta portfolio site focused on Tribal stewardship, improved forest management, carbon finance, GIS, public speaking, and research." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">
+      <strong>Quentin Ikuta, M.S.</strong>
+      <span>Forestry • Tribal Stewardship • Climate Finance • GIS</span>
+    </div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ifm.html">My Work</a>
+      <a href="featured.html">Featured</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="research.html">Research</a>
+      <a href="updates.html">GIS</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="container split">
+    <div class="panel card">
+      <div class="eyebrow">About</div>
+      <h1 style="font-size:clamp(2.4rem,5vw,4.2rem);">Grounding technical climate work in Tribal stewardship priorities.</h1>
+      <p class="lead">My work centers on making complex forest carbon and stewardship systems more useful, legible, and actionable for Tribal Nations and partners. That includes improved forest management strategy, technical advising, public speaking, and partnership building across nonprofit, academic, and private sector settings.</p>
+      <div class="tags">
+        <span class="tag">Improved Forest Management strategy</span>
+        <span class="tag">Tribal stewardship</span>
+        <span class="tag">Carbon finance</span>
+        <span class="tag">GIS</span>
+      </div>
+    </div>
+    <div class="panel card media-card">
+      <img src="assets/images/plot.jpg" alt="Portrait of Quentin outdoors" />
+      <div class="media-meta">
+        <h3>Professional focus</h3>
+        <p>I am especially interested in approaches that support Tribal sovereignty, strengthen forestry programs, and connect climate finance with grounded stewardship outcomes rather than abstract market narratives alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <div class="panel card">
+      <h2>What this site covers</h2>
+      <div class="list" style="margin-top:1rem;">
+        <div class="list-item"><strong>Improved Forest Management</strong><p>Project strategy, feasibility, communication, and stewardship alignment. Primary IFM methodology is interest is ACR IFM 2.1.</p></div>
+        <div class="list-item"><strong>Speaking and Engagement</strong><p>Conference presentations, workshops, Tribal engagements, and moderation roles.</p></div>
+        <div class="list-item"><strong>Research and Media</strong><p>Publications, featured links, and public facing project materials.</p></div>
+      </div>
+    </div>
+    <div class="panel card">
+      <img class="inline-photo" src="assets/images/hero.jpg" alt="Quentin near coastal grasses and water" />
+      <h2>Current focus areas</h2>
+      <div class="list" style="margin-top:1rem;">
+        <div class="list-item"><strong>Forestry Project Management</strong><p>Project development support and technical translation.</p></div>
+        <div class="list-item"><strong>Land-Based Revenue Pathways</strong><p>Climate finance, stewardship planning, and relationship building.</p></div>
+        <div class="list-item"><strong>Capacity Building</strong><p>Work with Tribal leaders, forestry staff, youth, and partners.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<section class="footer">
+  <div class="container">
+    <div class="footer-card card">
+      <div>
+        <h3 style="font-size:1.4rem; margin-bottom:.2rem;">Get in touch</h3>
+        <p>For speaking, collaboration, Tribal stewardship strategy, or carbon market related conversations, connect through your preferred channel.</p>
+      </div>
+      <div class="cta-row" style="margin:0;">
+        <a class="btn btn-primary" href="mailto:ikuta.quentin@gmail.com?subject=Invitation to Connect&body=Hello, I would like to know more about..." target="_blank" rel="noreferrer">Email: Contact Quentin</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/company/national-indian-carbon-coalition" target="_blank" rel="noreferrer">Linkedin: ILTF-NICC</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const path = location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === path) link.classList.add('active');
+});
+</script>
+
+</body>
+</html>

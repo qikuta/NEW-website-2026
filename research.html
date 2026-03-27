@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quentin Ikuta | Research</title>
+<meta name="description" content="Quentin Ikuta portfolio site focused on Tribal stewardship, improved forest management, carbon finance, GIS, public speaking, and research." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">
+      <strong>Quentin Ikuta, M.S.</strong>
+      <span>Forestry • Tribal Stewardship • Climate Finance • GIS</span>
+    </div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ifm.html">My Work</a>
+      <a href="featured.html">Featured</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="research.html">Research</a>
+      <a href="updates.html">GIS</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="container split">
+    <div class="panel card">
+      <div class="eyebrow">Research</div>
+      <h1 style="font-size:clamp(2.4rem,5vw,4.2rem);">Publications, Collaborative Research, and Public-Facing Technical Outputs.</h1>
+      <p class="lead">A dedicated research page that separates my authorship and collaborative literature outputs from the rest of the portfolio.</p>
+    </div>
+    <div class="panel card media-card">
+      <img src="assets/images/tree.jpeg" alt="tree cross section" />
+      <div class="media-meta">
+        <h3>Research connected to practice</h3>
+        <p>Field-grounded resarch is critical to ensure applicability and connectedness to resources.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <article class="panel card">
+      <h3>First author • Journal of Forestry (2025)</h3>
+      <p>Research connected to oak regeneration in the southern Appalachian mountains and forestry field experience with the Forest Service.<br> Article Title: Mapping Oak (Quercus spp.) Regeneration Potential Within the Nantahala National Forest.</p>
+      <a class="btn btn-secondary" style="margin-top:1rem;" href="https://research.fs.usda.gov/treesearch/69440" target="_blank" rel="noreferrer">USFS Treesearch</a>
+    </article>
+    <article class="panel card">
+      <h3>Indigenous forest based carbon offsetting framework</h3>
+      <p>Contributing author and presenter for work advancing Tribal centered carbon frameworks through a University of British Columbia convening context.</p>
+      <a class="btn btn-secondary" style="margin-top:1rem;" href="https://pif.forestry.ubc.ca/ifbco-home-page/" target="_blank" rel="noreferrer">University of British Columbia</a>
+    </article>
+    <article class="panel card">
+      <h3>Carbon Direct / Meta research</h3>
+      <p>Three publication related outputs focused on remote sensing, canopy height modeling, and scaling forest carbon markets.</p>
+      <div class="cta-row">
+        <a class="btn btn-secondary" href="https://www.carbon-direct.com/insights/scaling-forest-carbon-with-artificial-intelligence-remote-sensing" target="_blank" rel="noreferrer">Scaling Forest Carbon with AI & RS</a>
+        <a class="btn btn-secondary" href="https://www.carbon-direct.com/research-and-reports/meta-landscape-analysis" target="_blank" rel="noreferrer">Forest Carbon Remote Sensing</a>
+        <a class="btn btn-secondary" href="https://www.carbon-direct.com/research-and-reports/meta-guidebook" target="_blank" rel="noreferrer">CHM Methodology</a>
+      </div>
+    </article>
+    <article class="panel card">
+      <h3>Tribal Carbon Co Benefits Tool feature</h3>
+      <p>Featured in an ESRI blog highlighting the Tribal Carbon Co Benefits Tool and related applied GIS work.</p>
+      <a class="btn btn-secondary" style="margin-top:1rem;" href="https://tribalcobenefits-iltf.hub.arcgis.com/" target="_blank" rel="noreferrer">Tribal Co-Benefits Hub</a>
+    </article>
+  </div>
+</section>
+
+</main>
+<section class="footer">
+  <div class="container">
+    <div class="footer-card card">
+      <div>
+        <h3 style="font-size:1.4rem; margin-bottom:.2rem;">Get in touch</h3>
+        <p>For speaking, collaboration, Tribal stewardship strategy, or carbon market related conversations, connect through your preferred channel.</p>
+      </div>
+      <div class="cta-row" style="margin:0;">
+        <a class="btn btn-primary" href="mailto:ikuta.quentin@gmail.com?subject=Invitation to Connect&body=Hello, I would like to know more about..." target="_blank" rel="noreferrer">Email: Contact Quentin</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/company/national-indian-carbon-coalition" target="_blank" rel="noreferrer">Linkedin: ILTF-NICC</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+const path = location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === path) link.classList.add('active');
+});
+</script>
+
+</body>
+</html>

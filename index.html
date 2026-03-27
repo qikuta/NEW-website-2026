@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quentin Ikuta, M.S. | Home</title>
+<meta name="description" content="Quentin Ikuta portfolio site focused on Tribal stewardship, improved forest management, carbon finance, GIS, public speaking, and research." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">
+      <strong>Quentin Ikuta, M.S.</strong>
+      <span>Forestry • Tribal Stewardship • Climate Finance • GIS</span>
+    </div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ifm.html">My Work</a>
+      <a href="featured.html">Featured</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="research.html">Research</a>
+      <a href="updates.html">GIS</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="container hero-grid">
+    <div class="hero-copy glass">
+      <div class="eyebrow">Landing page • multi page portfolio</div>
+      <h1>Tribal lands, climate finance, and generational stewardship.</h1>
+      <p class="lead">
+        I work at the intersection of Tribal land stewardship, forest carbon, GIS, and Indigenous-centered climate strategy. This site highlights my forestry work, featured media, speaking engagements, research, and updates in a more navigable multi page format.
+      </p>
+      <p>-------------------------------------------------------------------------</p>
+      <p>I currently represent the Indian Land Tenure Foundation (ILTF) - National Indian Carbon Coalition (NICC) as an Improved Forest Management Project Maanger.
+      </p>
+      <p>-------------------------------------------------------------------------</p>
+      <p>My previous work experience includes serving with the USDA Forest Service on the Umatilla and Nantahala National Forests, Americorps, and the Federal Reserve Bank of Minneapolis. 
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="about.html">Start with the overview</a>
+        <a class="btn btn-secondary" href="speaking.html">View speaking engagements</a>
+      </div>
+      <div class="metric-grid">
+        <div class="metric">
+          <strong>1500+</strong>
+          <span>Audience reached in flagship conference speaking settings</span>
+        </div>
+        <div class="metric">
+          <strong>20,000+ acres</strong>
+          <span>Tribal forest lands being developed and explored for Improved Forest Management</span>
+        </div>
+        <div class="metric">
+          <strong>Multi-Sector</strong>
+          <span>Work spanning Tribal Nations, nonprofits, research, GIS, and carbon market partners including NASA, The Nature Conservancy, and others.</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo glass">
+      <div class="photo-caption">
+        <strong>Field grounded, public facing, and relationship oriented.</strong>
+        <p>Healthy forests are the foundation of resilient communities. They protect ecosystems, support livelihoods, and power real climate solutions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<section class="footer">
+  <div class="container">
+    <div class="footer-card card">
+      <div>
+        <h3 style="font-size:1.4rem; margin-bottom:.2rem;">Get in touch</h3>
+        <p>For speaking, collaboration, Tribal stewardship strategy, or carbon market related conversations, connect through your preferred channel.</p>
+      </div>
+      <div class="cta-row" style="margin:0;">
+        <a class="btn btn-primary" href="mailto:ikuta.quentin@gmail.com?subject=Invitation to Connect&body=Hello, I would like to know more about..." target="_blank" rel="noreferrer">Email: Contact Quentin</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/company/national-indian-carbon-coalition" target="_blank" rel="noreferrer">Linkedin: ILTF-NICC</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const path = location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === path) link.classList.add('active');
+});
+</script>
+
+</body>
+</html>

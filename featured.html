@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quentin Ikuta | Featured Work</title>
+<meta name="description" content="Quentin Ikuta portfolio site focused on Tribal stewardship, improved forest management, carbon finance, GIS, public speaking, and research." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">
+      <strong>Quentin Ikuta, M.S.</strong>
+      <span>Forestry • Tribal Stewardship • Climate Finance • GIS</span>
+    </div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ifm.html">My Work</a>
+      <a href="featured.html">Featured</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="research.html">Research</a>
+      <a href="updates.html">GIS</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="panel card">
+      <div class="eyebrow">Featured Work</div>
+      <h1 style="font-size:clamp(2.4rem,5vw,4.2rem);">Public links, project media, and key resources.</h1>
+      <p class="lead">A dedicated page for the most important external references tied to this work and public profile.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-3">
+    <article class="panel card">
+      <h3>Akiing Azhenan project video</h3>
+      <p>Translating to "Taking Back The Land" in Ojibwe, This is a featured video resource showcasing Bois Forte's rematration of 28,000 acres of ancestral forestlands via Carbon financing.</p>
+      <a class="btn btn-secondary" style="margin-top:1rem;" href="https://youtu.be/g2SVgVxJ4cE?si=xV2wLRL3GucMM4TD" target="_blank" rel="noreferrer">Watch on YouTube</a>
+    </article>
+    <article class="panel card">
+      <h3>Journal of Forestry publication</h3>
+      <p>Research connected to oak regeneration in the southern Appalachian mountains and forestry field experience with the Forest Service.<br> Article Title: Mapping Oak (Quercus spp.) Regeneration Potential Within the Nantahala National Forest.</p>
+      <a class="btn btn-secondary" style="margin-top:1rem;" href="https://research.fs.usda.gov/treesearch/69440" target="_blank" rel="noreferrer">View via USFS Treesearch</a>
+    </article>
+    <article class="panel card">
+      <h3>ILTF-NICC Website</h3>
+      <p>The official website for the ILTF-National Indian Carbon Coalition that contains additional project and informational resources.</p>
+      <a class="btn btn-secondary" style="margin-top:1rem;" href="https://indiancarbon.org" target="_blank" rel="noreferrer">Visit indiancarbon.org</a>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container gallery">
+    <figure class="panel card media-card">
+      <img src="assets/images/bf.png" alt="Youtube screen showing the video intro" />
+      <figcaption>Land rematriation is the ultimate goal.</figcaption>
+    </figure>
+    <figure class="panel card media-card">
+      <img src="assets/images/maxent.png" alt="screenshot of maxent model output" />
+      <figcaption>Result of White Oak MaxEnt Model.</figcaption>
+    </figure>
+    <figure class="panel card media-card">
+      <img src="assets/images/indiancarbon.png" alt="Indian Carbon landing page" />
+      <figcaption>The official ITLF-NICC website.</figcaption>
+    </figure>
+  </div>
+</section>
+
+</main>
+<section class="footer">
+  <div class="container">
+    <div class="footer-card card">
+      <div>
+        <h3 style="font-size:1.4rem; margin-bottom:.2rem;">Get in touch</h3>
+        <p>For speaking, collaboration, Tribal stewardship strategy, or carbon market related conversations, connect through your preferred channel.</p>
+      </div>
+      <div class="cta-row" style="margin:0;">
+        <a class="btn btn-primary" href="mailto:ikuta.quentin@gmail.com?subject=Invitation to Connect&body=Hello, I would like to know more about..." target="_blank" rel="noreferrer">Email: Contact Quentin</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/company/national-indian-carbon-coalition" target="_blank" rel="noreferrer">Linkedin: ILTF-NICC</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const path = location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === path) link.classList.add('active');
+});
+</script>
+
+</body>
+</html>
