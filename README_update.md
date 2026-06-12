@@ -21,10 +21,32 @@ Revision notes:
 
 - Added a publications and research outputs section to the Research page.
 
-- Revised public systems language across the site to use stronger public-interest conservation and community-serving conservation language.
+- Revised public service language across the site to use stronger public-interest conservation and community-serving conservation language.
 
 
 Revision notes:
 - Reframed career language so the site reads as professional alignment rather than active job seeking.
 - Added LiDAR, CAFO runoff, and black ash StoryMap images to assets/images and assets/images/thumbs.
 - Rebuilt the Research page with publications and research outputs paired with related images.
+
+
+Latest revision:
+- Added water quality, forest conservation, forest inventory, and partner field visit images.
+- Placed the new images across the Home, About, Stewardship, Engagement, Featured, and Research pages.
+- Added Research page cards for forest inventory and water quality as connected stewardship themes.
+
+
+Final revision:
+- Replaced stiff public service and public-interest phrasing with more natural public service and stewardship language.
+- Preserved all prior enhancements, including updated images, research captions, publications, CAFO map, black ash map, LiDAR field image, water quality image, forest inventory image, and partner field visit images.
+
+
+Final image coverage verification:
+- All image assets are now directly referenced by the site, including landscape, agriculture, water quality, forest, NASA, LiDAR, and CAFO images.
+- The Research page remains publications-first, with images used as supporting visual context.
+
+
+Final design and image coverage pass:
+- Stewardship page now separates text and imagery for readability.
+- Engagement and Speaking pages use the community presentation and Umatilla field images.
+- Source-original CAFO and LiDAR images remain referenced for asset coverage, while the Research page uses cleaner visual aliases.
