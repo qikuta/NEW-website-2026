@@ -1,1 +1,0 @@
-Keep the existing images in this folder from the GitHub repository. The updated HTML and CSS reference those image filenames.
